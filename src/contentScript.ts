@@ -1,6 +1,6 @@
 const API_BASE_URL = "https://shadowban.hmpf.club/" as const;
 const IGNORE_PAGE_PATHS_REGEX = new RegExp(
-  /\/(?:(?:notification|i\/bookmark|message)s|(?:explor|hom)e)/
+  /\/(?:(?:n(?:otification|ewsletter)|(?:keyboard_shortcu|lis)t|communitie|bookmark|setting|topic)s|m(?:oment_maker|essages)|(?:explor|hom)e|display|flow)/
 );
 
 type ShadowbanStatus = {
