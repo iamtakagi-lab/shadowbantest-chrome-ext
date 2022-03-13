@@ -25,12 +25,8 @@ type ShadowbanStatus = {
     search: boolean;
     typeahead: boolean;
   };
-  timestamp?: number;
+  timestamp: number;
 };
-
-(async () => {
-  await test();
-})();
 
 async function check(screenName: string): Promise<Response> {
   const url = new URL(`${API_BASE_URL}${screenName}`);
@@ -64,7 +60,7 @@ async function test() {
         }
         if(status.tests){
             // Search Suggestion Ban と Search Ban は BAN のとき False を返却します。
-            result.innerText = `Shadowban Status\n
+            result.innerText = `@${screenName} Shadowban Status\n
                                 Search Suggestion Ban: ${!status.tests.typeahead}\n
                                 Search Ban: ${!status.tests.search}\n
                                 Ghost Ban: ${status.tests.ghost.ban}\n
@@ -80,3 +76,5 @@ async function test() {
     target.appendChild(result)
   }
 }
+
+test();
