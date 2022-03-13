@@ -2,7 +2,7 @@
   "name": "Shadowban Test",
   "manifest_version": 3,
   "version": "1.0.0",
-  "description": "a",
+  "description": "Shadowban Test Chrome Extension",
   "permissions": [],
   "content_scripts": [
     {
