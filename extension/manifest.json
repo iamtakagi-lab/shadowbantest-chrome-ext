@@ -1,0 +1,14 @@
+{
+  "name": "Shadowban Test",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "description": "a",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://mobile.twitter.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
